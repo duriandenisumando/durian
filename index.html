@@ -280,9 +280,35 @@
     </section>
   </main>
 
-  <script>
-    (() => {
-      const extensions = ["jpg", "jpeg", "png", "webp", "avif"];
+  
+<script type="module">
+  (() => {
+    const extensions = ["jpg", "jpeg", "png", "webp", "avif"];
+    const baseUrl = import.meta.env.BASE_URL;
+
+    document.querySelectorAll("[data-image-key]").forEach((image) => {
+      const container = image.closest(".product-image");
+      let extensionIndex = 0;
+
+      const tryNextExtension = () => {
+        if (extensionIndex >= extensions.length) return;
+
+        image.src = `${baseUrl}assets/${image.dataset.imageKey}.${extensions[extensionIndex++]}`;
+      };
+
+      image.addEventListener(
+        "load",
+        () => container.classList.add("has-image"),
+        { once: true }
+      );
+
+      image.addEventListener("error", tryNextExtension);
+
+      tryNextExtension();
+    });
+  })();
+</script>
+
       document.querySelectorAll("[data-image-key]").forEach((image) => {
         const container = image.closest(".product-image");
         let extensionIndex = 0;
