@@ -1,331 +1,603 @@
 <!doctype html>
+
 <html lang="id">
+
 <head>
+
   <meta charset="utf-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <meta name="theme-color" content="#f3f1e7">
+
   <meta name="description" content="Katalog Deni Sumando — Durian PREMIUM dan LOKAL di Pekanbaru. Hubungi Admin melalui WhatsApp.">
+
   <title>Deni Sumando — Durian PREMIUM dan LOKAL</title>
+
   <style>
+
     :root {
+
       color-scheme: light;
+
       font-size: 18px;
+
       --ink: #17291f;
+
       --forest: #173b2c;
+
       --forest-deep: #102d21;
+
       --leaf: #b4d264;
+
       --gold: #f1c95a;
+
       --cream: #f3f1e7;
+
       --paper: #fffef8;
+
       --muted: #68736a;
+
       --line: rgba(23, 41, 31, .12);
+
       --shadow: 0 22px 56px rgba(27, 46, 33, .12);
+
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
     }
+
     * { box-sizing: border-box; }
+
     html { scroll-behavior: smooth; }
+
     body { margin: 0; background: var(--cream); color: var(--ink); }
+
     a { color: inherit; }
+
     .shell { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+
     .topbar { height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+
     .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+
     .brand-mark { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 15px 15px 15px 5px; background: var(--forest); color: var(--leaf); transform: rotate(-3deg); }
+
     .brand-mark svg { transform: rotate(3deg); }
+
     .brand-name { font-weight: 800; letter-spacing: -.04em; font-size: 19px; }
+
     .brand-sub { display: block; margin-top: 2px; color: var(--muted); font-size: 11px; letter-spacing: .11em; text-transform: uppercase; }
+
     .instagram-link { display: inline-flex; align-items: center; gap: 9px; text-decoration: none; color: #405044; font-size: 15px; font-weight: 700; padding: 11px 15px; border: 1px solid var(--line); border-radius: 999px; transition: background .2s, transform .2s; }
+
     .instagram-link:hover { background: var(--paper); transform: translateY(-1px); }
+
     .instagram-link svg { width: 16px; height: 16px; }
+
     .hero { position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr .92fr; align-items: center; min-height: 440px; padding: clamp(28px, 5vw, 62px); border-radius: 28px; background: var(--forest); color: #fffef6; box-shadow: var(--shadow); }
+
     .hero::before, .hero::after { content: ""; position: absolute; border: 1px solid rgba(226, 241, 183, .12); border-radius: 50%; pointer-events: none; }
+
     .hero::before { width: 520px; height: 520px; right: -188px; top: -220px; }
+
     .hero::after { width: 380px; height: 380px; right: -120px; top: -150px; }
+
     .hero-copy { position: relative; z-index: 1; max-width: 500px; padding-right: 20px; }
+
     .eyebrow { display: inline-flex; align-items: center; gap: 9px; margin: 0 0 19px; color: #d2e89e; font-size: 13px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+
     .eyebrow::before { content: ""; display: inline-block; width: 24px; height: 2px; background: var(--gold); }
+
     h1 { margin: 0; font-size: clamp(44px, calc(6vw + 2px), 70px); line-height: .99; letter-spacing: -.065em; }
+
     .hero-subtitle { max-width: 430px; margin: 18px 0 0; color: rgba(255, 254, 246, .78); font-size: clamp(17px, calc(1.7vw + 2px), 20px); line-height: 1.55; }
+
     .profile-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 24px; color: rgba(255, 254, 246, .78); font-size: 15px; }
+
     .profile-meta a { display: inline-flex; align-items: center; gap: 7px; color: inherit; text-decoration: none; }
+
     .profile-meta a:hover { text-decoration: underline; }
+
     .profile-meta svg { width: 16px; height: 16px; color: var(--leaf); }
+
     .meta-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,.45); }
+
     .guarantee { display: inline-flex; align-items: center; gap: 8px; margin-top: 23px; padding: 9px 13px; border: 1px solid rgba(209, 231, 163, .3); border-radius: 999px; color: #e0f0bd; background: rgba(209, 231, 163, .08); font-size: 14px; font-weight: 800; letter-spacing: .05em; }
+
     .guarantee svg { width: 15px; height: 15px; }
+
     .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; }
+
     .button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 18px; border: 0; border-radius: 14px; text-decoration: none; font-size: 16px; font-weight: 800; transition: transform .18s, box-shadow .18s, background .18s; }
+
     .button:hover { transform: translateY(-2px); }
+
     .button svg { width: 18px; height: 18px; }
+
     .button-primary { color: #183224; background: var(--leaf); box-shadow: 0 8px 20px rgba(7, 20, 12, .17); }
+
     .button-primary:hover { background: #c2dd7c; }
+
     .button-quiet { color: #fffef6; border: 1px solid rgba(255,255,255,.23); background: rgba(255,255,255,.06); }
+
     .hero-visual { position: relative; z-index: 1; justify-self: end; width: min(100%, 410px); }
+
     .photo-frame { position: relative; overflow: hidden; aspect-ratio: 1 / .94; border-radius: 46% 46% 26px 26px; border: 6px solid rgba(255,255,255,.12); background: #d9d6bb; box-shadow: 0 24px 48px rgba(0,0,0,.23); transform: rotate(2deg); }
+
     .photo-frame img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+
     .photo-glow { position: absolute; z-index: -1; inset: 9% -8% -8% 13%; border-radius: 50%; background: rgba(180, 210, 100, .3); filter: blur(2px); }
+
     .catalog { padding: 68px 0 72px; }
+
     .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 20px; }
+
     .section-kicker { margin: 0 0 7px; color: #677461; font-size: 13px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+
     h2 { margin: 0; font-size: clamp(30px, calc(4vw + 2px), 40px); letter-spacing: -.055em; line-height: 1.06; }
+
     .section-subtitle { max-width: 560px; margin: 9px 0 0; color: var(--muted); font-size: 16px; line-height: 1.55; }
+
     .catalog-note { margin: 0; color: var(--muted); font-size: 15px; }
+
     .category-nav { display: flex; flex-wrap: wrap; gap: 9px; padding: 0 0 27px; border-bottom: 1px solid var(--line); }
+
     .category-nav a { display: inline-flex; align-items: center; gap: 10px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,254,248,.72); color: #405044; text-decoration: none; font-size: 14px; font-weight: 800; transition: background .18s, transform .18s; }
+
     .category-nav a:hover { transform: translateY(-1px); background: var(--paper); }
+
     .category-nav span { display: grid; place-items: center; min-width: 22px; height: 22px; padding: 0 5px; border-radius: 999px; background: #e8f0d8; color: var(--forest); font-size: 12px; }
+
     .menu-section { scroll-margin-top: 24px; }
+
     .menu-section + .menu-section { margin-top: 42px; }
+
     .menu-section-heading { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+
     .menu-section-heading .section-kicker { margin-bottom: 6px; }
+
     .menu-section-heading h3 { margin: 0; font-size: clamp(25px, calc(3vw + 2px), 31px); letter-spacing: -.045em; }
+
     .menu-section-heading p:not(.section-kicker) { margin: 6px 0 0; color: var(--muted); font-size: 15px; line-height: 1.5; }
+
     .category-count { flex: none; padding: 7px 10px; border-radius: 999px; background: #e8eadb; color: #52604e; font-size: 13px; font-weight: 800; }
+
     .product-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+
     .product-card { display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid rgba(23, 41, 31, .09); border-radius: 20px; background: var(--paper); box-shadow: 0 12px 32px rgba(27, 46, 33, .06); transition: transform .2s, box-shadow .2s; }
+
     .product-card:hover { transform: translateY(-3px); box-shadow: 0 17px 36px rgba(27, 46, 33, .11); }
+
     .product-image { position: relative; display: grid; place-items: center; aspect-ratio: 1.3 / 1; overflow: hidden; background: linear-gradient(140deg, #e8ebd8, #f4efdc); }
+
     .product-image img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; opacity: 0; visibility: hidden; transition: opacity .25s; }
+
     .product-image.has-image img { opacity: 1; visibility: visible; }
+
     .product-placeholder { display: flex; width: 100%; height: 100%; align-items: center; justify-content: center; flex-direction: column; gap: 9px; padding: 14px; background: radial-gradient(circle at 50% 38%, rgba(255,255,255,.72) 0 17%, transparent 18%), linear-gradient(140deg, #e8ebd8, #f4efdc); color: #65715d; text-align: center; font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; transition: opacity .25s; }
+
     .product-placeholder svg { width: 36px; height: 36px; opacity: .72; }
+
     .product-image.has-image .product-placeholder { opacity: 0; pointer-events: none; }
+
     .product-info { display: flex; flex: 1; flex-direction: column; padding: 15px 16px 16px; }
+
     .product-tag { display: inline-block; margin-bottom: 7px; color: #65715d; font-size: 11px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+
     .product-info h4 { margin: 0; font-size: clamp(18px, calc(1.8vw + 2px), 21px); letter-spacing: -.035em; line-height: 1.2; }
+
     .product-description { min-height: 38px; margin: 7px 0 13px; color: var(--muted); font-size: 14px; line-height: 1.5; }
+
     .product-cta { width: 100%; min-height: 42px; margin-top: auto; color: #173224; background: #e8f0d8; white-space: nowrap; font-size: 14px; }
+
     .product-cta:hover { background: #dce9c2; }
+
     .contact-strip { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-top: 24px; padding: 20px 22px; border-radius: 18px; background: #e7e8d9; }
+
     .contact-copy { display: flex; align-items: center; gap: 14px; }
+
     .contact-icon { display: grid; place-items: center; flex: none; width: 42px; height: 42px; border-radius: 14px; background: var(--forest); color: var(--leaf); }
+
     .contact-icon svg { width: 19px; height: 19px; }
+
     .contact-copy p { margin: 0; color: #697367; font-size: 14px; }
+
     .contact-copy strong { display: block; margin-top: 3px; color: var(--ink); font-size: 17px; }
+
     .contact-strip .button { min-height: 42px; color: #f7f6ec; background: var(--forest); font-size: 15px; }
+
     footer { display: flex; justify-content: space-between; gap: 16px; padding: 0 0 27px; color: #737b71; font-size: 13px; }
+
     footer a { text-decoration: none; }
+
     footer a:hover { text-decoration: underline; }
+
     @media (max-width: 760px) {
+
       .shell { width: min(100% - 28px, 560px); }
+
       .topbar { height: 72px; }
+
       .brand-mark { width: 39px; height: 39px; }
+
       .instagram-link { padding: 10px 12px; font-size: 14px; }
+
       .hero { grid-template-columns: 1fr; gap: 32px; min-height: 0; padding: 31px 24px 27px; border-radius: 23px; }
+
       .hero-copy { padding-right: 0; }
+
       .hero-visual { justify-self: center; width: min(82%, 360px); margin: 2px 0 6px; }
+
       .photo-frame { aspect-ratio: 1 / .82; border-radius: 42% 42% 22px 22px; }
+
       .catalog { padding: 51px 0 55px; }
+
       .section-heading { align-items: start; flex-direction: column; gap: 8px; }
+
       .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+
       .product-info { padding: 12px; }
+
       .product-info h4 { font-size: 18px; }
+
       .product-description { min-height: 54px; margin-bottom: 10px; font-size: 13px; }
+
       .product-cta { min-height: 40px; padding-inline: 10px; }
+
       .menu-section + .menu-section { margin-top: 34px; }
+
       .contact-strip { align-items: flex-start; flex-direction: column; padding: 17px; }
+
       .contact-strip .button { width: 100%; }
+
       footer { padding-bottom: 24px; flex-direction: column; gap: 7px; }
+
     }
+
     @media (max-width: 390px) {
+
       .shell { width: calc(100% - 22px); }
+
       .brand-sub { font-size: 9px; }
+
       .instagram-link { gap: 6px; padding: 9px 10px; font-size: 13px; }
+
       .hero { padding-inline: 19px; }
+
       h1 { font-size: 44px; }
+
       .product-grid { gap: 9px; }
+
       .product-info { padding: 10px; }
+
       .product-info h4 { font-size: 17px; }
+
       .product-description { min-height: 60px; font-size: 12px; }
+
       .product-cta { font-size: 13px; }
+
       .hero-actions { flex-direction: column; }
+
       .hero-actions .button { width: 100%; }
+
     }
+
     @media (prefers-reduced-motion: reduce) {
+
       html { scroll-behavior: auto; }
+
       *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+
     }
+
   </style>
+
 </head>
+
 <body>
+
   <header class="shell topbar">
+
     <a class="brand" href="#atas" aria-label="Deni Sumando — kembali ke atas">
+
       <span class="brand-mark" aria-hidden="true">
+
         <svg viewBox="0 0 32 32" width="23" height="23" fill="none">
+
           <path d="M6 18.5c.4-6.2 4.1-10.4 10-12.7 5.9 2.3 9.6 6.5 10 12.7-2.2 5.1-5.5 7.7-10 7.7s-7.8-2.6-10-7.7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+
           <path d="M16 8v16M11.1 11.4l4.9 4.2 4.9-4.2M9.2 18l6.8 5 6.8-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+
         </svg>
+
       </span>
+
       <span><span class="brand-name">Deni Sumando</span><span class="brand-sub">Durian PREMIUM dan LOKAL</span></span>
+
     </a>
+
     <a class="instagram-link" href="https://www.instagram.com/durian.denisumando/" target="_blank" rel="noopener noreferrer" aria-label="Buka Instagram @durian.denisumando">
+
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.6" cy="6.6" r="1" fill="currentColor"/></svg>
+
       @durian.denisumando
+
     </a>
+
   </header>
 
   <main id="atas" class="shell">
+
     <section class="hero" aria-labelledby="hero-title">
+
       <div class="hero-copy">
+
         <p class="eyebrow">Durian PREMIUM dan LOKAL</p>
+
         <h1 id="hero-title">Deni<br>Sumando</h1>
+
         <p class="hero-subtitle">Durian PREMIUM dan LOKAL</p>
+
         <div class="profile-meta">
+
           <a href="https://maps.app.goo.gl/JKGsZoN1VRmvekqk7" target="_blank" rel="noopener noreferrer" aria-label="Buka lokasi di Google Maps">
+
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 10.2c0 5.2-8 11-8 11s-8-5.8-8-11a8 8 0 1 1 16 0Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.7"/></svg>
+
             Lokasi Outlet
+
           </a>
+
         </div>
+
         <span class="guarantee">
+
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m12 3 2.5 1.6 3-.1.8 2.9 2.2 2-1.2 2.8.4 3-2.7 1.4-1.5 2.6-3-.7-2.8 1.1-2-2.2-2.9-.8.1-3-1.7-2.5 1.7-2.5-.1-3 2.9-.8 2-2.2 2.3.4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="m8.8 12.3 2.1 2.1 4.5-4.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
           100% GARANSI
+
         </span>
+
         <div class="hero-actions">
+
           <a class="button button-primary" href="https://wa.me/6281170722020?text=Halo%20Admin%2C%20saya%20ingin%20bertanya%20tentang%20Musang%20King%20Jumbo%20Fresh." target="_blank" rel="noopener noreferrer">
+
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.5 11.6a8.3 8.3 0 0 1-12.3 7.2L3.5 20l1.3-4.4a8.3 8.3 0 1 1 15.7-4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.3 8.4c.5 2.7 2.4 4.7 5.2 5.4l1.1-1.3 2 .9c-.1 1.1-.8 1.8-2 1.9-3.5-.3-6.5-3.2-6.8-6.6 0-1.2.7-1.9 1.8-2l.9 2-1.2 1.1" fill="currentColor"/></svg>
+
             Chat Admin
+
           </a>
+
         </div>
+
       </div>
+
       <div class="hero-visual" aria-label="Foto durian">
+
         <div class="photo-glow"></div>
+
         <div class="photo-frame"><img src="durian.jpg" alt="Durian terbuka dengan daging buah berwarna kuning" fetchpriority="high"></div>
+
       </div>
+
     </section>
 
     <section id="katalog" class="catalog" aria-labelledby="catalog-title">
+
       <div class="section-heading">
+
         <div>
+
           <p class="section-kicker">PILIHAN DARI DENI SUMANDO</p>
+
           <h2 id="catalog-title">Menu &amp; Produk</h2>
+
           <p class="section-subtitle">Durian segar, menu favorit, sampai stok frozen untuk dinikmati kapan saja.</p>
+
         </div>
+
         <p class="catalog-note">· Tanya ketersediaan ke admin.</p>
+
       </div>
+
       <nav class="category-nav" aria-label="Pilih kategori produk">
+
         <a href="#buah-fresh">Buah Fresh <span>02</span></a>
+
         <a href="#menu-favorit">Menu Favorit <span>04</span></a>
+
         <a href="#frozen">Frozen <span>03</span></a>
+
       </nav>
 
       <section id="buah-fresh" class="menu-section" aria-labelledby="buah-fresh-title">
+
         <div class="menu-section-heading">
+
           <div><p class="section-kicker">01 / SEGAR DARI PILIHAN TERBAIK</p><h3 id="buah-fresh-title">Buah Fresh</h3><p>Durian lokal dan pilihan premium untuk dinikmati segar.</p></div>
+
           <span class="category-count">2 produk</span>
+
         </div>
+
         <div class="product-grid">
+
           <article class="product-card">
+
             <div class="product-image"><img data-image-key="buah-fresh-durian-lokal" alt="Durian lokal fresh" loading="lazy"><div class="product-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 5c5.9 2.3 9.6 6.5 10 12.7-2.2 5.1-5.5 7.7-10 7.7S8.2 22.8 6 17.7C6.4 11.5 10.1 7.3 16 5Z" stroke="currentColor" stroke-width="1.6"/><path d="M16 7v17M11.5 10.7l4.5 4 4.5-4M9.5 17l6.5 4.5 6.5-4.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Foto segera hadir</span></div></div>
+
             <div class="product-info"><span class="product-tag">Buah fresh</span><h4>Durian Lokal</h4><p class="product-description">Pilihan durian lokal segar. Tanyakan jenis yang tersedia hari ini.</p><a class="button product-cta" href="https://wa.me/6281170722020?text=Halo%20Admin%2C%20saya%20ingin%20bertanya%20tentang%20Durian%20Lokal%20Fresh." target="_blank" rel="noopener noreferrer">Tanya Admin</a></div>
+
           </article>
+
           <article class="product-card">
+
             <div class="product-image"><img data-image-key="buah-fresh-durian-premium" alt="Durian premium fresh" loading="lazy"><div class="product-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 5c5.9 2.3 9.6 6.5 10 12.7-2.2 5.1-5.5 7.7-10 7.7S8.2 22.8 6 17.7C6.4 11.5 10.1 7.3 16 5Z" stroke="currentColor" stroke-width="1.6"/><path d="M16 7v17M11.5 10.7l4.5 4 4.5-4M9.5 17l6.5 4.5 6.5-4.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Foto segera hadir</span></div></div>
+
             <div class="product-info"><span class="product-tag">Buah fresh</span><h4>Durian Premium</h4><p class="product-description">Tersedia pilihan Musang King, Bawor, Duri Hitam, Montong, Blackthorn dan Masmuar.</p><a class="button product-cta" href="https://wa.me/6281170722020?text=Halo%20Admin%2C%20saya%20ingin%20bertanya%20tentang%20Durian%20Premium%20Fresh." target="_blank" rel="noopener noreferrer">Tanya Admin</a></div>
+
           </article>
+
         </div>
+
       </section>
 
       <section id="menu-favorit" class="menu-section" aria-labelledby="menu-favorit-title">
+
         <div class="menu-section-heading">
+
           <div><p class="section-kicker">02 / TEMAN NGEMIL FAVORIT</p><h3 id="menu-favorit-title">Menu Favorit</h3><p>Menu durian yang pas untuk menemani waktu santai.</p></div>
+
           <span class="category-count">4 menu</span>
+
         </div>
+
         <div class="product-grid">
+
           <article class="product-card">
+
             <div class="product-image"><img data-image-key="menu-favorit-ketan" alt="Ketan" loading="lazy"><div class="product-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M5 13h22l-2.2 12H7.2L5 13Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 10c1.3-2 2.3-2 3.6 0 1.3-2 2.3-2 3.6 0 1.3-2 2.3-2 3.6 0 1.3-2 2.3-2 3.6 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span>Foto segera hadir</span></div></div>
+
             <div class="product-info"><span class="product-tag">Menu favorit</span><h4>Ketan</h4><p class="product-description">Ketan lembut untuk dinikmati sebagai teman durian.</p><a class="button product-cta" href="https://wa.me/6281170722020?text=Halo%20Admin%2C%20saya%20ingin%20bertanya%20tentang%20Ketan." target="_blank" rel="noopener noreferrer">Tanya Admin</a></div>
+
           </article>
+
           <article class="product-card">
+
             <div class="product-image"><img data-image-key="menu-favorit-ketan-fla-durian" alt="Ketan Fla durian" loading="lazy"><div class="product-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M5 13h22l-2.2 12H7.2L5 13Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 10c1.3-2 2.3-2 3.6 0 1.3-2 2.3-2 3.6 0 1.3-2 2.3-2 3.6 0 1.3-2 2.3-2 3.6 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span>Foto segera hadir</span></div></div>
+
             <div class="product-info"><span class="product-tag">Menu favorit</span><h4>Ketan Fla Durian</h4><p class="product-description">Ketan berpadu dengan topping fla durian.</p><a class="button product-cta" href="https://wa.me/6281170722020?text=Halo%20Admin%2C%20saya%20ingin%20bertanya%20tentang%20Ketan%20Fla%20Durian." target="_blank" rel="noopener noreferrer">Tanya Admin</a></div>
+
           </article>
+
           <article class="product-card">
+
             <div class="product-image"><img data-image-key="menu-favorit-es-durian" alt="Es durian" loading="lazy"><div class="product-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M8 11h16l-2 15H10L8 11Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M11 8c0-1.8 2-2.2 2-4M17 8c0-1.8 2-2.2 2-4M12 16h.1M18 20h.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Foto segera hadir</span></div></div>
+
             <div class="product-info"><span class="product-tag">Menu favorit</span><h4>Es Durian</h4><p class="product-description">Daging durian dengan campuran susu dan es yang di blend.</p><a class="button product-cta" href="https://wa.me/6281170722020?text=Halo%20Admin%2C%20saya%20ingin%20bertanya%20tentang%20Es%20Durian." target="_blank" rel="noopener noreferrer">Tanya Admin</a></div>
+
           </article>
+
           <article class="product-card">
+
             <div class="product-image"><img data-image-key="menu-favorit-es-campur-durian" alt="Es campur durian" loading="lazy"><div class="product-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M8 11h16l-2 15H10L8 11Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M11 8c0-1.8 2-2.2 2-4M17 8c0-1.8 2-2.2 2-4M12 16h.1M18 20h.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Foto segera hadir</span></div></div>
+
             <div class="product-info"><span class="product-tag">Menu favorit</span><h4>Es Campur Durian</h4><p class="product-description">Topping cincau, delima mutiara, agar-agar, pokat (optional dengan ketersediaan), buah durian.</p><a class="button product-cta" href="https://wa.me/6281170722020?text=Halo%20Admin%2C%20saya%20ingin%20bertanya%20tentang%20Es%20Campur%20Durian." target="_blank" rel="noopener noreferrer">Tanya Admin</a></div>
+
           </article>
+
         </div>
+
       </section>
 
       <section id="frozen" class="menu-section" aria-labelledby="frozen-title">
+
         <div class="menu-section-heading">
+
           <div><p class="section-kicker">03 / PRAKTIS DISIMPAN</p><h3 id="frozen-title">Frozen</h3><p>Stok durian beku untuk dinikmati atau diolah kapan saja.</p></div>
+
           <span class="category-count">3 produk</span>
+
         </div>
+
         <div class="product-grid">
+
           <article class="product-card">
+
             <div class="product-image"><img data-image-key="frozen-durian-premium" alt="Durian premium frozen" loading="lazy"><div class="product-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 4v24M5.6 10l20.8 12M5.6 22l20.8-12M10 6l6 4 6-4M10 26l6-4 6 4M4 15l6 1-1-6M28 17l-6-1 1 6M4 17l6-1-1 6M28 15l-6 1 1-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Foto segera hadir</span></div></div>
+
             <div class="product-info"><span class="product-tag">Frozen</span><h4>Durian Premium</h4><p class="product-description">Pilihan durian premium beku. Tanyakan varian yang tersedia.</p><a class="button product-cta" href="https://wa.me/6281170722020?text=Halo%20Admin%2C%20saya%20ingin%20bertanya%20tentang%20Durian%20Premium%20Frozen." target="_blank" rel="noopener noreferrer">Tanya Admin</a></div>
+
           </article>
+
           <article class="product-card">
+
             <div class="product-image"><img data-image-key="frozen-durian-lokal" alt="Durian lokal frozen" loading="lazy"><div class="product-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 4v24M5.6 10l20.8 12M5.6 22l20.8-12M10 6l6 4 6-4M10 26l6-4 6 4M4 15l6 1-1-6M28 17l-6-1 1 6M4 17l6-1-1 6M28 15l-6 1 1-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Foto segera hadir</span></div></div>
+
             <div class="product-info"><span class="product-tag">Frozen</span><h4>Durian Lokal</h4><p class="product-description">Durian lokal beku, praktis untuk stok di rumah.</p><a class="button product-cta" href="https://wa.me/6281170722020?text=Halo%20Admin%2C%20saya%20ingin%20bertanya%20tentang%20Durian%20Lokal%20Frozen." target="_blank" rel="noopener noreferrer">Tanya Admin</a></div>
+
           </article>
+
           <article class="product-card">
+
             <div class="product-image"><img data-image-key="frozen-daging-durian" alt="Daging durian frozen" loading="lazy"><div class="product-placeholder" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 4v24M5.6 10l20.8 12M5.6 22l20.8-12M10 6l6 4 6-4M10 26l6-4 6 4M4 15l6 1-1-6M28 17l-6-1 1 6M4 17l6-1-1 6M28 15l-6 1 1-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Foto segera hadir</span></div></div>
+
             <div class="product-info"><span class="product-tag">Frozen</span><h4>Daging Durian Tanpa Biji</h4><p class="product-description">Daging durian tanpa biji, praktis untuk stok atau olahan.</p><a class="button product-cta" href="https://wa.me/6281170722020?text=Halo%20Admin%2C%20saya%20ingin%20bertanya%20tentang%20Daging%20Durian%20Frozen." target="_blank" rel="noopener noreferrer">Tanya Admin</a></div>
+
           </article>
+
         </div>
+
       </section>
 
       <aside class="contact-strip" aria-label="Kontak WhatsApp Admin">
+
         <div class="contact-copy">
+
           <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20.5 11.6a8.3 8.3 0 0 1-12.3 7.2L3.5 20l1.3-4.4a8.3 8.3 0 1 1 15.7-4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.3 8.4c.5 2.7 2.4 4.7 5.2 5.4l1.1-1.3 2 .9c-.1 1.1-.8 1.8-2 1.9-3.5-.3-6.5-3.2-6.8-6.6 0-1.2.7-1.9 1.8-2l.9 2-1.2 1.1" fill="currentColor"/></svg></span>
+
           <div><p>WhatsApp Admin</p><strong>081170722020</strong></div>
+
         </div>
+
         <a class="button" href="https://wa.me/6281170722020?text=Halo%20Admin%2C%20saya%20ingin%20bertanya%20tentang%20Musang%20King%20Jumbo%20Fresh." target="_blank" rel="noopener noreferrer">Hubungi Admin</a>
+
       </aside>
+
     </section>
+
   </main>
 
-  
 <script type="module">
+
   (() => {
+
     const extensions = ["jpg", "jpeg", "png", "webp", "avif"];
+
     const baseUrl = import.meta.env.BASE_URL;
 
     document.querySelectorAll("[data-image-key]").forEach((image) => {
+
       const container = image.closest(".product-image");
+
       let extensionIndex = 0;
 
       const tryNextExtension = () => {
+
         if (extensionIndex >= extensions.length) return;
 
         image.src = `${baseUrl}assets/${image.dataset.imageKey}.${extensions[extensionIndex++]}`;
+
       };
 
       image.addEventListener(
+
         "load",
+
         () => container.classList.add("has-image"),
+
         { once: true }
+
       );
 
       image.addEventListener("error", tryNextExtension);
 
       tryNextExtension();
+
     });
+
   })();
+
 </script>
 
-      document.querySelectorAll("[data-image-key]").forEach((image) => {
-        const container = image.closest(".product-image");
-        let extensionIndex = 0;
-        const tryNextExtension = () => {
-          if (extensionIndex >= extensions.length) return;
-          image.src = `/assets/${image.dataset.imageKey}.${extensions[extensionIndex++]}`;
-        };
-        image.addEventListener("load", () => container.classList.add("has-image"), { once: true });
-        image.addEventListener("error", tryNextExtension);
-        tryNextExtension();
-      });
-    })();
-  </script>
-
   <footer class="shell">
+
     <span>Deni Sumando · Cabang Pekanbaru</span>
+
     <a href="https://www.instagram.com/durian.denisumando/" target="_blank" rel="noopener noreferrer">Instagram @durian.denisumando</a>
+
   </footer>
+
 </body>
+
 </html>
